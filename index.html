@@ -31,17 +31,19 @@ background-color: rgb(49, 49, 49);
   background-color: black;
   border: 5px solid black;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 7%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 .divButton {
-  height: 130px;
+  height: 100px;
   width: 100px;
-  background-color: darkgray;
   margin: auto;
   margin-top: 15%;
+  float: left;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .divButton:hover {
@@ -109,7 +111,7 @@ h1 {
 .close {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -132,8 +134,13 @@ h1 {
 <div class="divBox">
   <h1>Zätha Malmber</h1>
    <div class="divButton" id="myBtn"> 
+    <img src="bil.PNG" alt="test image" width="100" height="100">
+    <p>Bil</p>
+  </div>
+
+  <div class="divButton" id="kattBtn"> 
     <img src="katt.jpg" alt="test image" width="100" height="100">
-    <p>Test</p>
+    <p>Katt</p>
   </div>
 </div>
 
@@ -142,36 +149,69 @@ h1 {
   <!-- Modal content -->
    <div class="modal-top"><span class="close">&times;</span></div>
   <div class="modal-content">
+    <img src="bil.PNG" alt="test image" width="30%" height="30%" float="right">
+    <p>Test text för att se hur texten beter sig 
+      Test text för att se hur texten beter sig 
+      Test text för att se hur texten beter sig
+      Test text för att se hur texten beter sig
+      Test text för att se hur texten beter sig
+    </p>
+  </div>
+
+</div>
+
+<div id="test" class="modal">
+
+  <!-- Modal content -->
+   <div class="modal-top"><span class="close">&times;</span></div>
+  <div class="modal-content">
+    
   </div>
 
 </div>
 
 <script>
 // Get the modal
-var modal = document.getElementById("myModal");
+var carModal = document.getElementById("myModal");
+
+var kattModal = document.getElementById("test");
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
+
+var kattBtn = document.getElementById("kattBtn")
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
-  modal.style.display = "block";
+  carModal.style.display = "block";
+}
+
+kattBtn.onclick = function() {
+  kattModal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (carModal.style.display == "block"){
+    carModal.style.display = "none";
+  }
+  else if(kattModal.style.display == "block"){
+    kattModal.style.display = "none";
   }
 }
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == carModal) {
+    carModal.style.display = "none";
+  }
+  else if (event.target == kattModal) {
+    kattModal.style.display = "none";
+  }
+}
+
 </script>
 
 </body>
