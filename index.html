@@ -36,19 +36,26 @@ background-color: rgb(49, 49, 49);
   border-top-right-radius: 20px;
 }
 
+.divPortfolio{
+  height: 300px;
+  width: 50%;
+  float: left;
+  margin-bottom: 2%;
+}
+
 .divButton {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   margin: auto;
-  margin-top: 15%;
+  margin-top: 12%;
   float: left;
   margin-left: 3%;
   margin-right: 3%;
 }
 
 .divButton:hover {
-  background-color: gray;
   cursor: pointer;
+  margin-top: 10%;
 }
 
 p {
@@ -134,12 +141,12 @@ h1 {
 <div class="divBox">
   <h1>Zätha Malmber</h1>
    <div class="divButton" id="myBtn"> 
-    <img src="bil.PNG" alt="test image" width="100" height="100">
-    <p>Bil</p>
+    <img src="Portfolio.png" alt="test image" width="150" height="150">
+    <p>Portfolio</p>
   </div>
 
   <div class="divButton" id="kattBtn"> 
-    <img src="katt.jpg" alt="test image" width="100" height="100">
+    <img src="katt.jpg" alt="test image" width="150" height="150">
     <p>Katt</p>
   </div>
 </div>
@@ -147,17 +154,46 @@ h1 {
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
-   <div class="modal-top"><span class="close">&times;</span></div>
+  <div class="modal-top"><span class="close">&times;</span></div>
   <div class="modal-content">
-    <img src="bil.PNG" alt="test image" width="30%" height="30%" float="right">
-    <p>Test text för att se hur texten beter sig 
+    <div class="divPortfolio">
+       <img src="bil.PNG" alt="test image" width="100%" height="100%">
+    </div>
+    <div class="divPortfolio">
+      <p>Test text för att se hur texten beter sig 
       Test text för att se hur texten beter sig 
       Test text för att se hur texten beter sig
       Test text för att se hur texten beter sig
       Test text för att se hur texten beter sig
     </p>
-  </div>
+    </div>
 
+    <div class="divPortfolio">
+      <p>Test text för att se hur texten beter sig 
+      Test text för att se hur texten beter sig 
+      Test text för att se hur texten beter sig
+      Test text för att se hur texten beter sig
+      Test text för att se hur texten beter sig
+    </p>
+    </div>
+    <div class="divPortfolio">
+       <img src="bil.PNG" alt="test image" width="100%" height="100%">
+    </div>
+
+    <div class="divPortfolio">
+       <img src="bil.PNG" alt="test image" width="100%" height="100%">
+    </div>
+    <div class="divPortfolio">
+      <p>Test text för att se hur texten beter sig 
+      Test text för att se hur texten beter sig 
+      Test text för att se hur texten beter sig
+      Test text för att se hur texten beter sig
+      Test text för att se hur texten beter sig
+    </p>
+    </div>
+    
+  </div>
+  
 </div>
 
 <div id="test" class="modal">
