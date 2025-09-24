@@ -146,26 +146,40 @@ h2{
 <div class="divTop"> </div>
 <div class="divBox">
   <h1>Zätha Malmberg</h1>
-   <div class="divButton" id="myBtn"> 
-    <img src="Bilder/Portfolio.png" alt="Portfolio icon" width="150" height="150">
+   <div class="divButton" id="portfolioBtn"> 
+    <img src="Bilder/Portfolio2.png" alt="Portfolio icon" width="150" height="150">
     <p>Portfolio</p>
   </div>
 
-  <div class="divButton" id="kattBtn"> 
+  <div class="divButton" id="gameBtn"> 
     <img src="Bilder/katt.jpg" alt="cat image" width="150" height="150">
-    <p>Katt</p>
+    <p>Game Jam</p>
   </div>
 
   <div class="divButton"> 
     <a href="Bilder/CV.pdf"><img src="Bilder/katt.jpg" alt="Link to cv" width="150" height="150"></a>
     <p>CV</p>
   </div>
+
+  <div class="divButton" id="presonalBtn"> 
+    <img src="Bilder/katt.jpg" alt="cat image" width="150" height="150">
+    <p>Personal stuff</p>
+  </div>
+
+  <div class="divButton" id="linksBtn"> 
+    <img src="Bilder/katt.jpg" alt="cat image" width="150" height="150">
+    <p>Links</p>
+  </div>
+
+  <div class="divButton" id="meBtn"> 
+    <img src="Bilder/katt.jpg" alt="cat image" width="150" height="150">
+    <p>Me</p>
+  </div>
 </div>
 
 </div>
 
-<div id="myModal" class="modal">
-
+<div id="portfolioModal" class="modal">
   <!-- Modal content -->
   <div class="modal-top"><span class="close">&times;</span></div>
   <div class="modal-content">
@@ -207,7 +221,7 @@ h2{
         In this project I implemented Breadth-first search pathfinding algorithm. It was mede in Raylib using C. 
       </p>
       <p>
-       You can check it out on <a href="https://github.com/Zepzo/Defend-The-Spire">github</a> and <a href="https://zepzo1.itch.io/defend-the-spire">itch</a>
+       You can check it out on <a href="https://github.com/Zepzo/Defend-The-Spire">github</a> and <a href="https://zepzo1.itch.io/defend-the-spire">itch.io</a>
       </p>
     </div>
 
@@ -220,7 +234,7 @@ h2{
         What i worked on was mostly the programing and some level design.
       </p>
       <p>
-       You can check it out on <a href="https://github.com/JoannaNilss0n/TheScaryAmazingWolfGame">github</a> and play it on <a href="https://zepzo1.itch.io/the-scary-amazing-wolf-game">itch</a>
+       You can check it out on <a href="https://github.com/JoannaNilss0n/TheScaryAmazingWolfGame">github</a> and play it on <a href="https://zepzo1.itch.io/the-scary-amazing-wolf-game">itch.io</a>
       </p>
     </div>
     <div class="divPortfolio">
@@ -228,58 +242,144 @@ h2{
     </div>
     
   </div>
-  
 </div>
 
-<div id="test" class="modal">
+<div id="gameJamModal" class="modal">
+  <!-- Modal content -->
+   <div class="modal-top"><span class="close">&times;</span></div>
+  <div class="modal-content">
+    <div class="divPortfolio">
+       <img src="Bilder/PlumberHero.png" alt="Game image" width="100%" height="100%">
+    </div>
+    <div class="divPortfolio">
+      <h2>Plumber hero</h2>
+      <p>
+        This is a game i worked on during the Global game jam 2025. 
+        I did the pixel art and created the map.
+        You play a plumber that has to fix pipes that leaks soap water in a city.
+      </p>
+      <p>
+        You can play it on <a href="https://zepzo1.itch.io/plumber-hero">itch.io</a></a>
+      </p>
+    </div>
 
+    <div class="divPortfolio">
+      <h2>Nightmare Depths</h2>
+      <p>
+        The game i made for the Ludum dare game jam 2025. 
+        Not much of a game we manly just finished the idea.
+        Its about going into painting and the more painting you enter the more distorted the world gets.
+      <p>
+        You can check it out on <a href="https://github.com/Sinow89/LD57-Depths">github</a> and <a href="https://zepzo1.itch.io/nightmare-depths">itch.io</a>
+      </p>
+    </div>
+    <div class="divPortfolio">
+       <img src="Bilder/NightmareDepths.png" alt="Game gif" width="100%" height="100%">
+    </div>
+  </div>
+</div>
+
+<div id="personalModal" class="modal">
   <!-- Modal content -->
    <div class="modal-top"><span class="close">&times;</span></div>
   <div class="modal-content">
     
   </div>
+</div>
 
+<div id="linksModal" class="modal">
+  <!-- Modal content -->
+   <div class="modal-top"><span class="close">&times;</span></div>
+  <div class="modal-content">
+    
+  </div>
+</div>
+
+<div id="meModal" class="modal">
+  <!-- Modal content -->
+   <div class="modal-top"><span class="close">&times;</span></div>
+  <div class="modal-content">
+    
+  </div>
 </div>
 
 <script>
 // Get the modal
-var carModal = document.getElementById("myModal");
+var portfolioModal = document.getElementById("portfolioModal");
 
-var kattModal = document.getElementById("test");
+var gameModal = document.getElementById("gameJamModal");
+
+var personalModal = document.getElementById("personalModal");
+
+var linksModal = document.getElementById("linksModal");
+
+var meModal = document.getElementById("meModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var portfolioBtn = document.getElementById("portfolioBtn");
 
-var kattBtn = document.getElementById("kattBtn")
+var gameBtn = document.getElementById("gameBtn");
+
+var presonalBtn = document.getElementById("presonalBtn");
+
+var linksBtn = document.getElementById("linksBtn");
+
+var meBtn = document.getElementById("meBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-  carModal.style.display = "block";
+portfolioBtn.onclick = function() {
+  portfolioModal.style.display = "block";
 }
 
-kattBtn.onclick = function() {
-  kattModal.style.display = "block";
+gameBtn.onclick = function() {
+  gameModal.style.display = "block";
+}
+
+presonalBtn.onclick = function() {
+  personalModal.style.display = "block";
+}
+
+linksBtn.onclick = function() {
+  linksModal.style.display = "block";
+}
+
+meBtn.onclick = function() {
+  meModal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  if (carModal.style.display == "block"){
-    carModal.style.display = "none";
-  }
-  else if(kattModal.style.display == "block"){
-    kattModal.style.display = "none";
-  }
+  
+  portfolioModal.style.display = "none";
+  // all bellow dont work
+  gameModal.style.display = "none";
+
+  personalModal.style.display = "none";
+
+  linksModal.style.display = "none";
+
+  meModal.style.display = "none";
+
 }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == carModal) {
-    carModal.style.display = "none";
+  if (event.target == portfolioModal) {
+    portfolioModal.style.display = "none";
   }
-  else if (event.target == kattModal) {
-    kattModal.style.display = "none";
+  else if (event.target == gameModal) {
+    gameModal.style.display = "none";
+  }
+  else if (event.target == personalModal) {
+    personalModal.style.display = "none";
+  }
+  else if (event.target == linksModal) {
+    linksModal.style.display = "none";
+  }
+  else if (event.target == meModal) {
+    meModal.style.display = "none";
   }
 }
 
