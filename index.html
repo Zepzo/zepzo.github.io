@@ -303,17 +303,6 @@ a:visited {
   </div>
 </div>
 
-<div id="CVModal" class="modal">
-  <!-- Modal content -->
-   <div class="modal-top">
-    <div id="closeCVBtn" class="closebutton"><span class="close">&times;</span></div>
-  </div>
-  <div class="modal-content">
-    <p><a href="Bilder/CV.pdf">My CV</a></a></p>>
-    <img src="Bilder/CV-1.png" alt="CV">
-  </div>
-</div>
-
 <div id="personalModal" class="modal">
   <!-- Modal content -->
    <div class="modal-top">
@@ -350,8 +339,6 @@ var portfolioModal = document.getElementById("portfolioModal");
 
 var gameModal = document.getElementById("gameJamModal");
 
-var CVModal = document.getElementById("CVModal");
-
 var personalModal = document.getElementById("personalModal");
 
 var linksModal = document.getElementById("linksModal");
@@ -362,8 +349,6 @@ var meModal = document.getElementById("meModal");
 var portfolioBtn = document.getElementById("portfolioBtn");
 
 var gameBtn = document.getElementById("gameBtn");
-
-var CVBtn = document.getElementById("CVBtn");
 
 var presonalBtn = document.getElementById("presonalBtn");
 
@@ -379,8 +364,6 @@ var closePortfolioBtn = document.getElementById("closePortfolioBtn");
 
 var closeGameBtn = document.getElementById("closeGameBtn");
 
-var closeCVBtn = document.getElementById("closeCVBtn");
-
 var closePresonalBtn = document.getElementById("closePresonalBtn");
 
 var closeLinksBtn = document.getElementById("closeLinksBtn");
@@ -394,10 +377,6 @@ portfolioBtn.onclick = function() {
 
 gameBtn.onclick = function() {
   gameModal.style.display = "block";
-}
-
-CVBtn.onclick = function() {
-  CVModal.style.display = "block";
 }
 
 presonalBtn.onclick = function() {
@@ -416,16 +395,13 @@ meBtn.onclick = function() {
 /*span.onclick = function() {
   portfolioModal.style.display = "none";
 }*/
+
 closePortfolioBtn.onclick = function() {
   portfolioModal.style.display = "none";
 }
 
 closeGameBtn.onclick = function() {
   gameModal.style.display = "none";
-}
-
-closeCVBtn.onclick = function() {
-  CVModal.style.display = "none";
 }
 
 closePresonalBtn.onclick = function() {
@@ -447,9 +423,6 @@ window.onclick = function(event) {
   }
   else if (event.target == gameModal) {
     gameModal.style.display = "none";
-  }
-  else if (event.target == CVModal) {
-    CVModal.style.display = "none";
   }
   else if (event.target == personalModal) {
     personalModal.style.display = "none";
